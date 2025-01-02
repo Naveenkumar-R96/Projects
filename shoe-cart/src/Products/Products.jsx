@@ -1,12 +1,16 @@
-import React from 'react'
-import "./Products.css"
+import React from "react";
+import "./Products.css";
+
+import Card from "../components/Card";
 
 const Products = () => {
   return (
-    <div>
-      Products
-    </div>
-  )
-}
+    <>
+      <section className="card-container">
+      <Card/>
+      </section>
+    </>
+  );
+};
 
-export default Products
+export default Products;
