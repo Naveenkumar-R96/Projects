@@ -1,11 +1,18 @@
-.recommended-flex{
-   display: flex;
+.recommended-flex {
+    display: flex;
     margin-left: 20rem;
     z-index: 10;
 }
-.recommended-title{
+
+.recommended-title {
     margin-left: 20rem;
     margin-bottom: 20px;
     margin-top: 20px;
     font-size: 20px;
+    
+}
+
+button {
+    
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);  
 }

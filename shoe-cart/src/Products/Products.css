@@ -4,13 +4,16 @@
   margin-left: 20rem;
   margin-top: 2rem;
   z-index: -2;
+   
 }
 
 .card {
   margin: 20px;
-  border: 2px solid #ededed;
+  border: 2px solid rgba(0, 0, 0, 0.117);
+  box-shadow: 0 4px  8px rgb(220, 212, 212);
   padding: 24px;
   cursor: pointer;
+  
 }
 
 .card-img {
@@ -46,3 +49,4 @@
 .bag-icon {
   color: #535353;
 }
+ 

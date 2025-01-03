@@ -24,4 +24,10 @@ nav {
     height: 1.5rem;
     margin-left: 2rem;
   }
-  
+  .search-input{
+    width: 30rem;
+    margin-left: 20rem;
+     border: 1.5px rgba(0, 0, 0, 0.514) solid;
+     border-radius: 1.5rem;
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.253);
+  }
