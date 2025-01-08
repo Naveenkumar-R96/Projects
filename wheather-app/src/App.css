@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css2?family=Alata&family=Crimson+Pro:ital,wght@0,200..900;1,200..900&family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  font-family: "Poppins", serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #2f3640;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  width: 350px;
+  padding: 20px;
+  background-color: #38bafb;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.input-container {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  border: 2px solid #70e6f3;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.cityInput {
+  flex: 1;
+  height: 30px;
+  border: none;
+  font-size: 16px;
+  padding: 10px;
+  outline: none;
+}
+.searchicon {
+  width: 15px;
+  cursor: pointer;
+  margin-right: 20px;
+  margin-top: 4px;
+}
+.image {
+  text-align: center;
+  height: 150px;
+  margin-bottom: 10px;
+}
+.image img {
+  width: 160px;
+  height: 160px;
+}
+.texp,
+.location,
+.country {
+  margin-top: 5px;
+  font-size: 25px;
+  color: #333;
+  text-transform: uppercase;
+}
+.location {
+  color: red;
+}
+.details-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+
+.data-container{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+.element img{
+  width: 50px;
+  height: 40px;
+}
