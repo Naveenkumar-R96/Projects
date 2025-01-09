@@ -9,6 +9,7 @@ import Rain from "./images/rain.png";
 import snow from "./images/snow.jpg";
 import Wind from "./images/wind.png";
 import "./App.css";
+import { FaHeart } from "react-icons/fa";
 import { MdError } from "react-icons/md";
 
 const WheatherDetails = ({
@@ -77,7 +78,7 @@ const App = () => {
   const [humidity, setHumidity] = useState(0);
   const [wind, setWind] = useState(0);
 
-  const [text, setText] = useState("Chennai");
+  const [text, setText] = useState("");
   const [citynotfound, setcitynotfound] = useState(false);
   const [error, seterror] = useState(false);
   const [loading, setloading] = useState(false);
@@ -105,7 +106,7 @@ const App = () => {
     fetchData();
   }, []);
 
-  const fetchData = async () => {
+const fetchData = async () => {
     let url = `https://api.openweathermap.org/data/2.5/weather?q=${text}&appid=${API_KEY}&units=Metric`;
 
     try {
@@ -188,6 +189,7 @@ const App = () => {
             citynotfound={citynotfound}
           />
         )}
+        <p className="foot">With <FaHeart className="foot-icon"/> Naveen </p>
       </div>
     </>
   );
