@@ -50,7 +50,7 @@ const Form = ({ addItems,currentItem }) => {
           onChange={(e) => setStatus(e.target.value)}
         />
         <button
-          className="h-10 py-1 px-3 mt-2 mb-2 font-semibold rounded border  text-black bg-teal-300"
+          className="h-10 py-1 px-3 mt-2 mb-2 font-semibold rounded border  text-black bg-teal-300 max-sm:w-[100px]"
           type="submit"
         >
           Save
