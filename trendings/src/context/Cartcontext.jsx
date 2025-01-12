@@ -1,6 +1,6 @@
 import { createContext, useContext, useState } from "react";
 import { allProducts } from "../assets";
-
+import { getItemFromStorage,getParsedItemFromStorage,setItemInStorage } from "../util/localStorage";
 const CartContext=createContext();
 
 export const CartProvider=({children})=>{
@@ -39,6 +39,13 @@ export const CartProvider=({children})=>{
                 )
             })
         })
+    }
+
+    const setLocalStorage=()=>{
+        if(allItems.length!== 0){
+            const inCartItems=allItems.filter((item)=>item.inCart)
+            setItemInStorage('cartitem',inCartItems)
+        }
     }
 
     return(
