@@ -12,21 +12,20 @@ export const CartProvider=({children})=>{
        console.log(item)
         setAllItem(prevItems=>{
             return(
+               
                 prevItems.map((previtem)=>{
-                    if(previtem.inCart){
-                        return previtem
-                    }
+                   
                     return previtem.id=== item.id ? {...previtem,inCart:true} :
                     previtem
                 })
             )
         })
     }
-
+   
     const removeFromCart=(item)=>{
         setAllItem((prevItems)=>{
             return prevItems.map((prevItem)=>{
-                return prevItem.id===item.id ? {...prevItem,inCart:false,quantity:1} : prevItem
+                return prevItem.id===item.id ? {...prevItem,inCart:false} : prevItem
             })
         })
     }
