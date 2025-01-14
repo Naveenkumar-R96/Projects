@@ -10,7 +10,7 @@ const Cart = ({ item, fromCart }) => {
       <img
         src={imageUrl}
         alt={name}
-        className={`group-hover:translate-y-2 transition-all  bg-contain text-center p-10 ${fromCart &&  "w-[100px] h-[100px]"}`}
+        className={`group-hover:translate-y-2 transition-all  bg-contain text-center p-10 ${fromCart &&  ""}`}
       />
       <div className="absolute bottom-0 left-10">
         <h1 className={`text-zinc-700 text-md mt-10 ${fromCart && 'text-[10px]'}`}>{name}</h1>
