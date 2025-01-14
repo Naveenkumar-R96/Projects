@@ -2,13 +2,22 @@ import React from "react";
 import "./Home.css";
 import { Link } from "react-router-dom";
 import { FaAngleDoubleRight } from "react-icons/fa";
+import { motion } from "framer-motion";
 const Home = () => {
+  const items = ["React", "JavaScript", "Framer Motion",'Tailwind','Bootstrap','TypeScript', "CSS", "HTML"];
   return (
     <>
-      <div className="container bg-[#0f0f0f] ">
+      <div className=" bg-[#0f0f0f] ">
         <div className="home w-[100%] mx-auto py-[30px] px-[40px] ">
           <div className="top-container w-[100%] flex flex-wrap">
-            <div className="left-container py-[30px] px-[30px]  rounded w-[49%] flex ">
+            <motion.div
+              className="left-container py-[30px] px-[30px]  rounded w-[49%] flex "
+              initial={{ x: "-100vw" }}
+              animate={{ x: 0 }}
+              transition={{
+                duration: 1,
+              }}
+            >
               <div className="image-container py-5 px-5 w-[200px] h-[200px] bg-[#323232] rounded-lg">
                 <div className="img-box  bg-teal-200 h-[100%] w-[100%] rounded-lg"></div>
               </div>
@@ -28,22 +37,69 @@ const Home = () => {
                   </div>
                 </div>
               </Link>
-            </div>
+            </motion.div>
 
             {/* Right Container */}
 
-            <div className="right-containe ml-5 w-[49%] py-[30px] px-[30px] ">
-              <div className="max-w-[100%]">
+            <motion.div className="right-container ml-5 w-[49%] py-[30px] px-[30px] "
+            
+             initial={{ y: "-100vw" }}
+             animate={{ y: 0 }}
+             transition={{
+               duration: 1,
+             }}>
+              <div className="">
                 <div className="top-box w-[100%] px-[20px] py-[10px] text-center text-[#6c6c6c] uppercase text-[20px]  ">
-                  <p>Latest Works and Feathured</p>
+                  <p>Fields that can work with</p>
                 </div>
-                <div className="bottom-box">
-                  <div className="box">
-                    l
+                <div className="bottom-box mt-6 flex w-full ">
+                  <div className="box  w-full p-7">
+                      {/* <p>More abut me</p> */}
+                      <div className="scrol"
+                        style={{
+                          overflow: "hidden",
+                          whiteSpace: "nowrap",
+                          width: "auto",
+                        }}
+                      >
+                        <motion.div
+                          style={{
+                            display: "flex",
+                            gap: "40px",
+                            fontSize: "24px",
+                            fontWeight: "bold",
+                          }}
+                          animate={{
+                            x: [0, -1000], // Adjust -1500 based on the total width of your content
+                          }}
+                          transition={{
+                            repeat: Infinity, // Loop infinitely
+                            ease: "linear",
+                            duration: 9, // Adjust the speed of scrolling
+                          }}
+                        >
+                          {/* Repeat the items twice to create a seamless scrolling effect */}
+                          {items.concat(items).map((word, index) => (
+                            <div
+                              key={index}
+                              style={{
+                               
+                                padding: "10px 20px",
+                                background: "#f0f0f0",
+                                borderRadius: "8px",
+                                color: "#333",
+                              }}
+                            >
+                              {word}
+                            </div>
+                          ))}
+                        </motion.div>
+                      </div>
+                    
                   </div>
                 </div>
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>

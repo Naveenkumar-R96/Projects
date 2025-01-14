@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 const Nav = () => {
   return (
@@ -9,24 +10,49 @@ const Nav = () => {
           <div className="nav_logo">
             <h1 className="text-3xl text-[#818181]">Naveen</h1>
           </div>
-          <div className="nav_links text-2xl">
-            <ul className="flex gap-5 text-[#818181]">
+          <motion.div
+            className="nav_links text-2xl  px-4 rounded-full border-2 border-[#818181] hover:border-[#cbc9c9] transition duration-150 "
+            initial={{y: "-10vw" }}
+            animate={{ y: 0.5 }}
+            transition={{
+              duration: 1,
+            }}
+          >
+            <ul className="flex gap-5 text-[#818181] ">
               <li>
-                <Link to="/" className="link">
+                <Link
+                  to="/"
+                  className="link hover:text-[#c9c7c7] transition duration-500"
+                >
                   Home
                 </Link>
               </li>
               <li>
-                <Link to="/about">About</Link>
+                <Link
+                  to="/about"
+                  className="link hover:text-[#c9c7c7] transition duration-500"
+                >
+                  About
+                </Link>
               </li>
               <li>
-                <Link to="/work">Works</Link>
+                <Link
+                  to="/work"
+                  className="link hover:text-[#c9c7c7] transition duration-500"
+                >
+                  Works
+                </Link>
               </li>
               <li>
-                <Link to="/contact">Contact</Link>
+                <Link
+                  to="/contact"
+                  className="link hover:text-[#c9c7c7] transition duration-500"
+                >
+                  Contact
+                </Link>
               </li>
             </ul>
-          </div>
+          </motion.div>
           <button className="btn border-2 border-[#818181] text-[#cac4c4] rounded-lg px-4 text-[20px]">
             <Link to="/contact">Let's Talk</Link>
           </button>

@@ -21,3 +21,13 @@ background: #0f0f0f;
     background: linear-gradient(to right,#383737,#181818);
     border-radius: 30px;
 }
+.box{
+    background: linear-gradient(to right,#383737,#181818);
+    border-radius: 10px;
+
+}
+.scrol{
+    overflow: "hidden";
+    white-space: nowrap;
+    width: "auto";
+}
