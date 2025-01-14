@@ -12,6 +12,10 @@ background: linear-gradient(60deg, rgba(61,61,62,1) 15%, rgba(9,10,28,1) 81%); *
 background: #0f0f0f;
 
 }
+.contact-container{
+    background: linear-gradient(to right,#383737,#181818);
+    border-radius: 10px;
+}
 .left-container{
     background: linear-gradient(to right,#383737,#181818);
     border-radius: 10px;
@@ -30,4 +34,17 @@ background: #0f0f0f;
     overflow: "hidden";
     white-space: nowrap;
     width: "auto";
+}
+.mid-box{
+    background: linear-gradient(to right,#383737,#181818);
+    border-radius: 10px;
+    
+
+}
+.mid-projects img{
+    width: 200px;
+}
+.specialization{
+    background: linear-gradient(to right,#383737,#181818);
+    border-radius: 10px;
 }

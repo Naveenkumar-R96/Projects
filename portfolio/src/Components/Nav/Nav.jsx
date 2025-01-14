@@ -5,24 +5,24 @@ import { motion } from "framer-motion";
 const Nav = () => {
   return (
     <>
-      <div className="bg-black text-white">
+      <div className="bg-black text-">
         <div className="nav_container flex w-[60%] mx-auto py-4 justify-between">
           <div className="nav_logo">
             <h1 className="text-3xl text-[#818181]">Naveen</h1>
           </div>
           <motion.div
-            className="nav_links text-2xl  px-4 rounded-full border-2 border-[#818181] hover:border-[#cbc9c9] transition duration-150 "
+            className="nav_links text-2xl  px-4 rounded-full border-2 border-[#c5c3c3] hover:border-[#cbc9c9] transition duration-150 "
             initial={{y: "-10vw" }}
             animate={{ y: 0.5 }}
             transition={{
               duration: 1,
             }}
           >
-            <ul className="flex gap-5 text-[#818181] ">
+            <ul className="flex gap-5 text-[#818181]"> 
               <li>
                 <Link
                   to="/"
-                  className="link hover:text-[#c9c7c7] transition duration-500"
+                  className="link hover:text-[#e4e0e0] transition duration-500"
                 >
                   Home
                 </Link>
@@ -30,7 +30,7 @@ const Nav = () => {
               <li>
                 <Link
                   to="/about"
-                  className="link hover:text-[#c9c7c7] transition duration-500"
+                  className="link hover:text-[#e4e0e0] transition duration-500"
                 >
                   About
                 </Link>
@@ -38,7 +38,7 @@ const Nav = () => {
               <li>
                 <Link
                   to="/work"
-                  className="link hover:text-[#c9c7c7] transition duration-500"
+                  className="link hover:text-[#e4e0e0] transition duration-500"
                 >
                   Works
                 </Link>
@@ -46,7 +46,7 @@ const Nav = () => {
               <li>
                 <Link
                   to="/contact"
-                  className="link hover:text-[#c9c7c7] transition duration-500"
+                  className="link hover:text-[#e4e0e0] transition duration-500"
                 >
                   Contact
                 </Link>
