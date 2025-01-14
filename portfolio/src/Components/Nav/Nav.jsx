@@ -11,14 +11,14 @@ const Nav = () => {
             <h1 className="text-3xl text-[#818181]">Naveen</h1>
           </div>
           <motion.div
-            className="nav_links text-2xl  px-4 rounded-full border-2 border-[#c5c3c3] hover:border-[#cbc9c9] transition duration-150 "
+            className="nav_links text-2xl max-sm:hidden px-4 rounded-full border-2 border-[#c5c3c3] hover:border-[#cbc9c9] transition duration-150 "
             initial={{y: "-10vw" }}
             animate={{ y: 0.5 }}
             transition={{
               duration: 1,
             }}
           >
-            <ul className="flex gap-5 text-[#818181]"> 
+            <ul className="flex gap-5 text-[#818181] "> 
               <li>
                 <Link
                   to="/"

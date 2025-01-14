@@ -1,16 +1,14 @@
 import React from "react";
 import "./Home.css";
 import { Link } from "react-router-dom";
-import { FaAngleDoubleRight } from "react-icons/fa";
-import { motion } from "framer-motion";
-import { BsPersonWorkspace } from "react-icons/bs";
-import project from "../../assets/img/my-works.png";
-import profile from "../../assets/img/profile.jpg";
-import { FaGithub } from "react-icons/fa";
-import { FaLinkedin } from "react-icons/fa";
-import { BsTwitterX } from "react-icons/bs";
+import { FaAngleDoubleRight, FaGithub, FaLinkedin } from "react-icons/fa";
+import { motion, useInView } from "framer-motion";
+import { BsPersonWorkspace, BsTwitterX } from "react-icons/bs";
 import { PiCertificateLight } from "react-icons/pi";
-import { GrProjects } from "react-icons/gr";
+import { GiFallingStar } from "react-icons/gi";
+import profile from "../../assets/img/profile.jpg";
+import pc from "../../assets/img/pc.png";
+import { useRef } from "react";
 const Home = () => {
   const items = [
     "React",
@@ -23,15 +21,18 @@ const Home = () => {
     "HTML",
     "Github",
   ];
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true }); //
   return (
     <>
       <div className="bg-[#0f0f0f] h-auto">
         <div className="home w-[100%] mx-auto py-[30px] px-[40px]">
-          <div className="top-container w-[100%] flex flex-wrap justify-evenly">
+          <div className="top-container w-[100%] flex flex-wrap justify-around">
             <motion.div
               className="left-container py-[30px] px-[30px] rounded w-[60%] flex justify-center"
-              initial={{ x: "-100vw" }}
-              animate={{ x: 0 }}
+              initial={{ x: "50%" ,y:"50%"}}
+              
+              animate={{ x: 0 ,y:0}}
               transition={{
                 duration: 1,
               }}
@@ -59,7 +60,14 @@ const Home = () => {
               </Link>
             </motion.div>
 
-            <div className="contact-container text-white w-[20%] h-[200px] mt-10 p-4">
+            <motion.div
+              className="contact-container text-white w-[20%] h-[200px] mt-10 p-4"
+              initial={{ y: "100vw" }}
+              animate={{ y: 0 }}
+              transition={{
+                duration: 1,
+              }}
+            >
               <div className="flex justify-evenly text-4xl mt-4">
                 <FaGithub className="bg-white text-black rounded-full" />
                 <FaLinkedin className="" />
@@ -74,13 +82,20 @@ const Home = () => {
                   <FaAngleDoubleRight className="text-[#818181] text-3xl transition duration-500 hover:text-white ml-[70%]" />
                 </span>
               </h1>
-            </div>
+            </motion.div>
           </div>
         </div>
 
         <section className="mid-container max-w-[90%] m-auto">
           <div className="flex justify-evenly">
-            <div className="mid-box w-[20%] h-[200px] flex flex-col justify-center items-center p-4 pb-5 mt-4">
+            <motion.div
+              className="mid-box w-[20%] h-[200px] flex flex-col justify-center items-center p-4 pb-5 mt-4"
+              initial={{ x: "100vw" }}
+              animate={{ x: 0 }}
+              transition={{
+                duration: 1,
+              }}
+            >
               <div className="icon-box">
                 <BsPersonWorkspace className="text-white text-[100px]" />
               </div>
@@ -95,7 +110,7 @@ const Home = () => {
                   <FaAngleDoubleRight className="text-[#818181] text-3xl transition duration-500 hover:text-white mt-[100%] ml-[90%]" />
                 </div>
               </div>
-            </div>
+            </motion.div>
             <motion.div
               className="right-container ml-5 w-[70%] py-[30px] px-[30px]"
               initial={{ y: "-100vw" }}
@@ -156,22 +171,52 @@ const Home = () => {
           </div>
         </section>
 
-        <section className="flex justify-around mb-[300px]">
-          <div className="specialization w-[30%] h-[200px] flex gap-5 justify-center p-5 mb-[300px]">
+        <motion.section className="flex mt-9 justify-around mb-[300px] gap-2 max-w-[90%] m-auto"
+          ref={ref}
+          initial={{ opacity: 0, y: 50 }} // Start hidden and slightly below
+          animate={isInView ? { opacity: 1, y: 0 } : {}} // Animate when in view
+          transition={{
+            duration: 0.8,
+            ease: "easeOut",}}>
+          <div
+            className="specialization w-[25%] h-[200px] flex gap-5 justify-center p-5 mb-[300px]"
+          
+            
+          >
             <div className="icons-container mt-7 text-white text-[90px]">
               <PiCertificateLight />
             </div>
             <div>
-              <h3 className="text-3xl text-[#818181] mt-5">Achievements</h3>
-              <h1 className="text-white mt-3 text-4xl">Credential</h1>
-              <FaAngleDoubleRight className="text-[#818181] text-3xl transition duration-500 hover:text-white ml-[90%] mt-3" />
+              <h3 className="text-2xl text-[#818181] mt-5">Achievements</h3>
+              <h1 className="text-white mt-3 text-3xl">Credential</h1>
+              <FaAngleDoubleRight className="text-[#818181] text-3xl transition duration-500 hover:text-white ml-[80%] mt-3" />
             </div>
           </div>
-          <div className="projects w-[50%] h-[200px] bg-gradient-to-r from-[#383737] to-[#181818] rounded-lg">
-            {/* <GrProjects className="text-white text-[90px] mt-7" /> */}
-            <img src={project} alt="" />
+          <div className="projects w-[40%] h-[200px] bg-gradient-to-r from-[#383737] to-[#181818] rounded-lg flex justify-evenly">
+            <img
+              src={pc}
+              alt=""
+              className="w-[200px] h-[100%]"
+              style={{ filter: "contrast(0)" }}
+            />
+            <div>
+              <h3 className="text-[#818181] text-2xl mt-5">Works</h3>
+              <h1 className="text-4xl text-white">
+                My major Works and Projects
+              </h1>
+              <FaAngleDoubleRight className="text-[#818181] text-3xl transition duration-500 hover:text-white ml-[80%] mt-3" />
+            </div>
           </div>
-        </section>
+          <div className="talk w-[20%] bg-gradient-to-r from-[#383737] to-[#181818] rounded-lg h-[200px] ">
+            <GiFallingStar className="text-white mt-5 ml-5 text-5xl " />
+            <h1 className="mt-4 ml-5 text-4xl text-white">
+              Lets Work Together{" "}
+              <span>
+                <FaAngleDoubleRight className="text-[#818181] text-3xl transition duration-500 hover:text-white ml-[70%] " />
+              </span>
+            </h1>
+          </div>
+        </motion.section>
       </div>
     </>
   );
