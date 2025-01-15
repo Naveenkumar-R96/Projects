@@ -170,7 +170,7 @@ const Home = () => {
           </div>
         </section>
 
-        <motion.section className="flex mt-9 justify-around mb-[300px] gap-2 max-w-[90%] m-auto"
+        <motion.section className="flex mt-9 justify-around mb-[300px] gap-2 max-w-[90%] m-auto flex-wrap"
           ref={ref}
           initial={{ opacity: 0, y: 50 }} // Start hidden and slightly below
           animate={isInView ? { opacity: 1, y: 0 } : {}} // Animate when in view
@@ -178,40 +178,40 @@ const Home = () => {
             duration: 0.8,
             ease: "easeOut",}}>
           <div
-            className="specialization w-[25%] h-[200px] flex gap-5 justify-center p-5 mb-[300px]"
+            className="specialization w-[25%] h-[200px] flex gap-5 justify-center p-5 mb-[300px] max-sm:w-auto max-sm:h-[180px] max-sm:mb-4"
           
             
           >
-            <div className="icons-container mt-7 text-white text-[90px]">
+            <div className="icons-container mt-7 text-white text-[90px]  max-sm:text-[50px]">
               <PiCertificateLight />
             </div>
             <div>
               <h3 className="text-2xl text-[#818181] mt-5">Achievements</h3>
-              <h1 className="text-white mt-3 text-3xl">Credential</h1>
+              <h1 className="text-white mt-3 text-3xl max-sm:xl">Credential</h1>
               <FaAngleDoubleRight className="text-[#818181] text-3xl transition duration-500 hover:text-white ml-[80%] mt-3" />
             </div>
           </div>
-          <div className="projects w-[40%] h-[200px] bg-gradient-to-r from-[#383737] to-[#181818] rounded-lg flex justify-evenly">
+          <div className="projects w-[40%] h-[200px] bg-gradient-to-r from-[#383737] to-[#181818] rounded-lg flex justify-evenly max-sm:w-[60%] items-center max-sm:h-auto p-3">
             <img
               src={pc}
               alt=""
-              className="w-[200px] h-[100%]"
+              className="w-[200px] h-[100%] max-sm:w-[80px] max-sm:h-[80px] rounded-lg"
               style={{ filter: "contrast(0)" }}
             />
             <div>
-              <h3 className="text-[#818181] text-2xl mt-5">Works</h3>
-              <h1 className="text-4xl text-white">
-                My major Works and Projects
+              <h3 className="text-[#818181] text-2xl mt-5 ">Works</h3>
+              <h1 className="text-4xl text-white max-sm:text-xl">
+                Internships and Experience
               </h1>
-              <FaAngleDoubleRight className="text-[#818181] text-3xl transition duration-500 hover:text-white ml-[80%] mt-3" />
+              <FaAngleDoubleRight className="text-[#818181] text-3xl transition duration-500 hover:text-white ml-[70%] mt-2" />
             </div>
           </div>
-          <div className="talk w-[20%] bg-gradient-to-r from-[#383737] to-[#181818] rounded-lg h-[200px] ">
-            <GiFallingStar className="text-white mt-5 ml-5 text-5xl " />
-            <h1 className="mt-4 ml-5 text-4xl text-white">
+          <div className="talk w-[20%] bg-gradient-to-r from-[#383737] to-[#181818] rounded-lg h-[200px] max-sm:w-[30%] max-sm:h-[140px] max-sm:mt-4">
+            <GiFallingStar className="text-white mt-5 ml-5 text-5xl max-sm:text-2xl " />
+            <h1 className="mt-4 ml-5 text-4xl text-white max-sm:text-xl">
               Lets Work Together{" "}
               <span>
-                <FaAngleDoubleRight className="text-[#818181] text-3xl transition duration-500 hover:text-white ml-[70%] " />
+                <FaAngleDoubleRight className="text-[#818181] text-3xl transition duration-500 hover:text-white ml-[70%] max-sm:text-xl " />
               </span>
             </h1>
           </div>
