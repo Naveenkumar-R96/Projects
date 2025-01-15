@@ -42,7 +42,7 @@ const Home = () => {
                 </div>
               </div>
               <Link to="/about">
-                <div className="detail-container  hover:text-white  ">
+                <div className="detail-container hover:text-white">
                   <h4 className="text-[#818181] uppercase text-3xl font-medium tracking-[1px] max-sm:text-xl">
                     A Web Developer
                   </h4>
@@ -60,7 +60,7 @@ const Home = () => {
             </motion.div>
 
             <motion.div
-              className="contact-container text-white w-[20%] h-auto  p-4 max-sm:w-[40%] max-sm:h-auto"
+              className="contact-container text-white w-[20%] h-auto p-4 max-sm:w-[40%] max-sm:h-auto"
               initial={{ y: "100vw" }}
               animate={{ y: 0 }}
               transition={{
@@ -85,10 +85,10 @@ const Home = () => {
           </div>
         </div>
 
-      <section className="mid-container max-w-[90%] m-auto">
-          <div className="flex justify-evenly">
+        <section className="mid-container max-w-[90%] m-auto">
+          <div className="flex justify-evenly max-sm:flex-wrap">
             <motion.div
-              className="mid-box w-[20%] h-[200px] flex flex-col justify-center items-center p-4 pb-5 mt-4"
+              className="mid-box w-[20%] h-[200px] flex flex-col justify-center items-center p-4 pb-5 mt-4 max-sm:w-[75%] max-sm:mb-4"
               initial={{ x: "100vw" }}
               animate={{ x: 0 }}
               transition={{
@@ -100,10 +100,10 @@ const Home = () => {
               </div>
               <div className="mid-details flex justify-start">
                 <div className="mid-info">
-                  <p className="uppercase text-[#bebdbd] text-2xl mt-3">
-                    Experiences
+                  <p className="uppercase text-[#bebdbd] text-2xl mt-3 max-sm:text-xl">
+                    Major Works
                   </p>
-                  <p className="text-[20px] text-white">Internships</p>
+                  <p className="text-[20px] text-white max-sm:text-2xl">Projects</p>
                 </div>
                 <div className="mid-icon">
                   <FaAngleDoubleRight className="text-[#818181] text-3xl transition duration-500 hover:text-white mt-[100%] ml-[90%]" />
@@ -111,7 +111,7 @@ const Home = () => {
               </div>
             </motion.div>
             <motion.div
-              className="right-container ml-5 w-[70%] py-[30px] px-[30px]"
+              className="right-container ml-5 w-[70%] py-[30px] px-[30px] max-sm:w-full max-sm:ml-0 max-sm:px-[10px]"
               initial={{ y: "-100vw" }}
               animate={{ y: 0 }}
               transition={{
@@ -119,7 +119,7 @@ const Home = () => {
               }}
             >
               <div>
-                <div className="top-box w-[100%] px-[20px] py-[10px] text-center text-[#6c6c6c] uppercase text-[20px]">
+                <div className="top-box w-[100%] px-[20px] py-[10px] text-center text-[#6c6c6c] uppercase text-[20px] max-sm:text-[16px]">
                   <p>Fields that can work with</p>
                 </div>
                 <div className="bottom-box mt-6 flex w-full">
@@ -169,7 +169,7 @@ const Home = () => {
             </motion.div>
           </div>
         </section>
- {/*  
+
         <motion.section className="flex mt-9 justify-around mb-[300px] gap-2 max-w-[90%] m-auto"
           ref={ref}
           initial={{ opacity: 0, y: 50 }} // Start hidden and slightly below
@@ -215,7 +215,7 @@ const Home = () => {
               </span>
             </h1>
           </div>
-        </motion.section> */}
+        </motion.section> 
       </div>
     </>
   );

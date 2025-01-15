@@ -12,7 +12,7 @@ const Responsive = ({open}) => {
             exit={{ opacity: 0 }}
             className="absolute top-20 left-0 w-full h-screen z-10"
           >
-            <div className="text-xl  uppercase bg-white text-black py-5m-6 rounded-3xl">
+            <div className="text-xl  uppercase bg-white text-black py-5  rounded-3xl">
               <ul className="flex flex-col justify-center items-center gap-5 tracking-wide" >
                 <li>Home</li>
                 <li>About</li>
