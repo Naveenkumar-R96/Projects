@@ -26,67 +26,66 @@ const Home = () => {
   return (
     <>
       <div className="bg-[#0f0f0f] h-auto">
-        <div className="home w-[100%] mx-auto py-[30px] px-[40px]">
-          <div className="top-container w-[100%] flex flex-wrap justify-around">
+        <div className="home w-[100%] mx-auto py-[30px] px-[40px] max-sm:px-[20px]">
+          <div className="top-container flex flex-wrap max-sm:flex-nowrap max-sm:gap-3 justify-evenly items-center">
             <motion.div
-              className="left-container py-[30px] px-[30px] rounded w-[60%] flex justify-center"
-              initial={{ x: "50%" ,y:"50%"}}
-              
-              animate={{ x: 0 ,y:0}}
+              className="left-container py-[20px] px-[20px] rounded w-[60%] flex justify-center max-sm:w-auto"
+              initial={{ x: "50%", y: "50%" }}
+              animate={{ x: 0, y: 0 }}
               transition={{
                 duration: 1,
               }}
             >
-              <div className="image-container py-5 px-5 w-[200px] h-[200px] bg-[#323232] rounded-lg mr-8">
+              <div className="image-container py-5 px-5 w-[200px] h-[200px] bg-[#323232] rounded-lg mr-8 max-sm:hidden">
                 <div className="img-box h-[100%] w-[100%] rounded-lg">
                   <img src={profile} alt="" className="rounded-2xl" />
                 </div>
               </div>
               <Link to="/about">
-                <div className="detail-container ml-8 hover:text-white w-[70%]">
-                  <h4 className="text-[#818181] uppercase text-3xl font-medium tracking-[1px]">
+                <div className="detail-container  hover:text-white  ">
+                  <h4 className="text-[#818181] uppercase text-3xl font-medium tracking-[1px] max-sm:text-xl">
                     A Web Developer
                   </h4>
-                  <h3 className="text-[42px] text-white tracking-wide font-medium hover:text-white">
+                  <h3 className="text-[42px] text-white tracking-wide font-medium hover:text-white max-sm:text-3xl">
                     NaveenKumar
                   </h3>
-                  <p className="text-[#818181] tracking-[1px] font-semibold">
+                  <p className="text-[#818181] tracking-[1px] font-semibold max-sm:text-sm">
                     Lorem ipsum dolor sit amet, consectetur{" "}
                   </p>
                   <div className="icon">
-                    <FaAngleDoubleRight className="text-[#818181] text-3xl transition duration-500 hover:text-white ml-[80%]" />
+                    <FaAngleDoubleRight className="text-[#818181] text-3xl transition duration-500 hover:text-white ml-[80%] max-sm:ml-[80%] md:mt-8" />
                   </div>
                 </div>
               </Link>
             </motion.div>
 
             <motion.div
-              className="contact-container text-white w-[20%] h-[200px] mt-10 p-4"
+              className="contact-container text-white w-[20%] h-auto  p-4 max-sm:w-[40%] max-sm:h-auto"
               initial={{ y: "100vw" }}
               animate={{ y: 0 }}
               transition={{
                 duration: 1,
               }}
             >
-              <div className="flex justify-evenly text-4xl mt-4">
+              <div className="flex justify-evenly text-4xl mt-4 max-sm:mt-1 max-sm:text-2xl">
                 <FaGithub className="bg-white text-black rounded-full" />
                 <FaLinkedin className="" />
                 <BsTwitterX className="" />
               </div>
-              <h3 className="uppercase text-2xl text-[#818181] mt-4 ml-5">
+              <h3 className="uppercase text-2xl text-[#818181] mt-2 ml-3 max-sm:text-xl">
                 Stay with me
               </h3>
-              <h1 className="text-4xl tracking-wider ml-5">
+              <h1 className="text-4xl tracking-wider ml-3 max-sm:text-2xl">
                 Profiles{" "}
                 <span>
-                  <FaAngleDoubleRight className="text-[#818181] text-3xl transition duration-500 hover:text-white ml-[70%]" />
+                  <FaAngleDoubleRight className="text-[#818181] text-3xl transition duration-500 hover:text-white ml-[70%] max-sm:ml-[50%]" />
                 </span>
               </h1>
             </motion.div>
           </div>
         </div>
 
-        <section className="mid-container max-w-[90%] m-auto">
+      <section className="mid-container max-w-[90%] m-auto">
           <div className="flex justify-evenly">
             <motion.div
               className="mid-box w-[20%] h-[200px] flex flex-col justify-center items-center p-4 pb-5 mt-4"
@@ -170,7 +169,7 @@ const Home = () => {
             </motion.div>
           </div>
         </section>
-
+ {/*  
         <motion.section className="flex mt-9 justify-around mb-[300px] gap-2 max-w-[90%] m-auto"
           ref={ref}
           initial={{ opacity: 0, y: 50 }} // Start hidden and slightly below
@@ -216,7 +215,7 @@ const Home = () => {
               </span>
             </h1>
           </div>
-        </motion.section>
+        </motion.section> */}
       </div>
     </>
   );
