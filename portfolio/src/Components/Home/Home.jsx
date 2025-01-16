@@ -9,7 +9,7 @@ import { GiFallingStar } from "react-icons/gi";
 import profile from "../../assets/img/profile.jpg";
 import pc from "../../assets/img/pc.png";
 import { useRef } from "react";
-import Nav from "../Nav/Nav";
+import Footer from "../Footer/Footer";
 const Home = () => {
   const items = [
     "React",
@@ -27,7 +27,7 @@ const Home = () => {
   return (
     <>
    
-      <div className="bg-[#0f0f0f] h-auto ">
+      <div className="bg-[#0f0f0f] h-[100%]">
         <div className="home w-[100%] mx-auto py-[30px] px-[40px] max-sm:px-[20px]">
           <div className="top-container flex flex-wrap max-sm:flex-nowrap max-sm:gap-3 justify-evenly items-center">
             <motion.div
@@ -135,7 +135,7 @@ const Home = () => {
                         width: "auto",
                       }}
                     >
-                      <motion.div
+                      <motion.div 
                         style={{
                           display: "flex",
                           gap: "40px",
@@ -159,6 +159,7 @@ const Home = () => {
                               background: "#f0f0f0",
                               borderRadius: "8px",
                               color: "#333",
+                              
                             }}
                           >
                             {word}
@@ -173,7 +174,7 @@ const Home = () => {
           </div>
         </section>
 
-        <motion.section className="flex mt-9 justify-around gap-2 max-w-[90%] m-auto flex-wrap"
+        <motion.section className="flex mt-9 justify-around gap-2 max-w-[100%] m-auto flex-wrap"
           ref={ref}
           initial={{ opacity: 0, y: 50 }} // Start hidden and slightly below
           animate={isInView ? { opacity: 1, y: 0 } : {}} // Animate when in view
@@ -185,7 +186,7 @@ const Home = () => {
           
             
           >
-            <div className="icons-container mt-7 text-white text-[90px]  max-sm:text-[50px]">
+            <div className="icons-container mt-7 text-white text-[90px]  max-md:text-[50px]">
               <PiCertificateLight />
             </div>
             <div>
@@ -220,6 +221,7 @@ const Home = () => {
           </div>
         </motion.section> 
       </div>
+      <Footer/>
     </>
   );
 };

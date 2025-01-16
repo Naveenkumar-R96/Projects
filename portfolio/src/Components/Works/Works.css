@@ -1,0 +1,23 @@
+.flip-card{
+    perspective: 1000px;
+}
+.flip-card-inner{
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+.flip-card-front,.flip-card-back{
+    position: absolute;
+    backface-visibility: hidden;
+}
+.flip-card-back{
+    transform: rotateY(180deg);
+}
+.wrapper::-webkit-scrollbar{
+    width: 0;
+    perspective: 1000px;
+}
+.wrapper{
+    background-image: url('/assets-to-pr1.jpg');
+    background-size: cover;
+    background-position: center;
+}
