@@ -8,6 +8,6 @@ import AllRoutes from "./Routes/AllRoutes";
 createRoot(document.getElementById("root")).render(
   <BrowserRouter>
     <App />
-    <AllRoutes />
+    
   </BrowserRouter>
 );

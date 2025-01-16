@@ -6,8 +6,9 @@ import Button from './Button'
 const App = () => {
   return (
     <div className=''>
-      <Nav/>
-      <Home/>
+     
+     <Nav />
+      <AllRoutes />
       {/* <Button/> */}
     </div>
   )

@@ -9,6 +9,7 @@ import { GiFallingStar } from "react-icons/gi";
 import profile from "../../assets/img/profile.jpg";
 import pc from "../../assets/img/pc.png";
 import { useRef } from "react";
+import Nav from "../Nav/Nav";
 const Home = () => {
   const items = [
     "React",
@@ -25,7 +26,8 @@ const Home = () => {
   const isInView = useInView(ref, { once: true }); //
   return (
     <>
-      <div className="bg-[#0f0f0f] h-auto">
+   
+      <div className="bg-[#0f0f0f] h-auto ">
         <div className="home w-[100%] mx-auto py-[30px] px-[40px] max-sm:px-[20px]">
           <div className="top-container flex flex-wrap max-sm:flex-nowrap max-sm:gap-3 justify-evenly items-center">
             <motion.div
@@ -46,7 +48,7 @@ const Home = () => {
                   <h4 className="text-[#818181] uppercase text-3xl font-medium tracking-[1px] max-sm:text-xl">
                     A Web Developer
                   </h4>
-                  <h3 className="text-[42px] text-white tracking-wide font-medium hover:text-white max-sm:text-3xl">
+                  <h3 className="text-[42px] text-white tracking-wide font-medium hover:text-white max-sm:text-3xl font-Jersey 20">
                     NaveenKumar
                   </h3>
                   <p className="text-[#818181] tracking-[1px] font-semibold max-sm:text-sm">
@@ -72,10 +74,10 @@ const Home = () => {
                 <FaLinkedin className="" />
                 <BsTwitterX className="" />
               </div>
-              <h3 className="uppercase text-2xl text-[#818181] mt-2 ml-3 max-sm:text-xl">
+              <h3 className="uppercase text-2xl text-[#818181] mt-2 ml-3 max-sm:text-xl max-sm:ml-1">
                 Stay with me
               </h3>
-              <h1 className="text-4xl tracking-wider ml-3 max-sm:text-2xl">
+              <h1 className="text-4xl tracking-wider ml-3 max-sm:text-2xl max-sm:ml-1">
                 Profiles{" "}
                 <span>
                   <FaAngleDoubleRight className="text-[#818181] text-3xl transition duration-500 hover:text-white ml-[70%] max-sm:ml-[50%]" />
@@ -87,6 +89,7 @@ const Home = () => {
 
         <section className="mid-container max-w-[90%] m-auto">
           <div className="flex justify-evenly max-sm:flex-wrap">
+            
             <motion.div
               className="mid-box w-[20%] h-[200px] flex flex-col justify-center items-center p-4 pb-5 mt-4 max-sm:w-[75%] max-sm:mb-4"
               initial={{ x: "100vw" }}
@@ -170,7 +173,7 @@ const Home = () => {
           </div>
         </section>
 
-        <motion.section className="flex mt-9 justify-around mb-[300px] gap-2 max-w-[90%] m-auto flex-wrap"
+        <motion.section className="flex mt-9 justify-around gap-2 max-w-[90%] m-auto flex-wrap"
           ref={ref}
           initial={{ opacity: 0, y: 50 }} // Start hidden and slightly below
           animate={isInView ? { opacity: 1, y: 0 } : {}} // Animate when in view
@@ -178,7 +181,7 @@ const Home = () => {
             duration: 0.8,
             ease: "easeOut",}}>
           <div
-            className="specialization w-[25%] h-[200px] flex gap-5 justify-center p-5 mb-[300px] max-sm:w-auto max-sm:h-[180px] max-sm:mb-4"
+            className="specialization w-[25%] h-[200px] flex gap-5 justify-center p-5 max-sm:w-auto max-sm:h-[180px] max-sm:mb-4"
           
             
           >
