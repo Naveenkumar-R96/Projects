@@ -12,12 +12,30 @@
 .flip-card-back{
     transform: rotateY(180deg);
 }
-.wrapper::-webkit-scrollbar{
+.wrape::-webkit-scrollbar{
     width: 0;
     perspective: 1000px;
 }
 .wrapper{
-    background-image: url('/assets-to-pr1.jpg');
-    background-size: cover;
-    background-position: center;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 30%;
+    overflow-x: auto;
+    gap: 20px;
+    align-items: center;
+}
+.wrape{
+overflow-x: auto;
+}
+.cards{
+    border-top-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+}
+.back{
+    border-top-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+    border: 2px solid white;
+}
+.bc-button{
+    border-bottom-left-radius: 30px;
 }

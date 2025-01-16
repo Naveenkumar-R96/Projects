@@ -4,6 +4,9 @@ import { motion } from "framer-motion";
 import Project1 from '../../assets/img/pr1.jpg';
 import Project2 from '../../assets/img/pr2.jpg';
 import Project3 from '../../assets/img/project3.jpeg';
+import { FaGithub } from "react-icons/fa";
+
+import { FaLongArrowAltRight } from "react-icons/fa";
 
 const Works = () => {
   const [cards, setCards] = useState([
@@ -14,6 +17,7 @@ const Works = () => {
       image: Project1,
       isFlipped: false,
       isAnimating: false,
+      backing:"#git #javascript #tailwind #typscript"
     },
     {
       title: "Project 2",
@@ -22,6 +26,7 @@ const Works = () => {
       image: Project2,
       isFlipped: false,
       isAnimating: false,
+      backing:"#git #javascript #tailwind #typscript"
     },
     {
       title: "Project 3",
@@ -30,6 +35,7 @@ const Works = () => {
       image: Project3,
       isFlipped: false,
       isAnimating: false,
+      backing:"#git #javascript #tailwind #typscript"
     },
     {
       title: "Project 1",
@@ -38,6 +44,7 @@ const Works = () => {
       image: Project1,
       isFlipped: false,
       isAnimating: false,
+      backing:"#git #javascript #tailwind #typscript"
     },
     {
       title: "Project 2",
@@ -46,6 +53,7 @@ const Works = () => {
       image: Project2,
       isFlipped: false,
       isAnimating: false,
+      backing:"#git #javascript #tailwind #typscript"
     },
     {
       title: "Project 3",
@@ -54,6 +62,7 @@ const Works = () => {
       image: Project3,
       isFlipped: false,
       isAnimating: false,
+      backing:"#git #javascript #tailwind #typscript"
     },
     {
       title: "Project 1",
@@ -62,6 +71,7 @@ const Works = () => {
       image: Project1,
       isFlipped: false,
       isAnimating: false,
+      backing:"#git #javascript #tailwind #typscript"
     },
     {
       title: "Project 2",
@@ -70,6 +80,7 @@ const Works = () => {
       image: Project2,
       isFlipped: false,
       isAnimating: false,
+      backing:"#git #javascript #tailwind #typscript"
     },
     {
       title: "Project 3",
@@ -78,6 +89,7 @@ const Works = () => {
       image: Project3,
       isFlipped: false,
       isAnimating: false,
+      backing:"#git #javascript #tailwind #typscript"
     },
   ]);
 
@@ -99,17 +111,17 @@ const Works = () => {
   return (
     <div className=" top-container h-screen bg-black relative "/*  style={{backgroundImage: `url(${Project2})`,backgroundSize: "cover",
       backgroundPosition: "center", backgroundRepeat:'no-repeat',  width: "100%",}} */ >
-        <h1 className="text-white text-[200px]  opacity-25 absolute -top-20 right-9">Work</h1>
-      <div className="cursor-pointer gap-4 flex">
-        <div className="w-[99%] m-auto flex gap-10 justify-center overflow-x-scroll wrapper items-center h-[80vh]">
+        <h1 className="text-white text-[200px]  opacity-25 absolute -top-20 right-9 max-sm:text-[100px] max-sm:-top-1">Work</h1>
+      <div className="cursor-pointer w-[90%] m-auto ">
+        <div className="flex wrape gap-4 items-center  h-[80vh] ml-8">
           {cards.map((card, index) => (
             <div
               key={index}
-              className="flip-card w-[400px] h-[300px] rounded-md grid-cols-2 wrapper over "
+              className="flip-card  h-[300px] rounded-md   "
               onMouseEnter={() => handleFlip(index)}
             >
               <motion.div
-                className="flip-card-inner h-[100%] text-white col-span-3 w-[300px] max-sm:max-w-[100px]"
+                className="flip-card-inner h-[100%] text-white col-span-3 w-[300px] max-sm:w-[200px]"
                 initial={false}
                 animate={{ rotateY: card.isFlipped ? 180 : 0 }}
                 transition={{ duration: 0.6 }}
@@ -117,27 +129,34 @@ const Works = () => {
               >
                 {/* Front Side */}
                 <div
-                  className="flip-card-front w-[100%] h-[100%] bg-cover border-1 rounded-lg p-4 text-white flex items-center flex-col "
-                  style={{ backgroundImage: `url(${card.image})` }}
+                  className="flip-card-front w-[100%] h-[100%] bg-cover border-1 rounded-lg p-5   bg-white text-black cards flex justify-center items-center flex-col "
+                 
                 >
-                  <h1 className="text-center">{card.title}</h1>
-                  <p>{card.description}</p>
+                  <h1 className="text-center mb-3 text-3xl max-sm:text-[18px] text-black">{card.title}</h1>
+                  <p className="max-sm:text-[16px] text-2xl opacity-60">{card.description}</p>
                 </div>
 
                 {/* Back Side */}
                 <div
-                  className="flip-card-back w-[100%] h-[100%] bg-cover border-1 rounded-lg p-4 text-white"
-                  style={{ backgroundImage: `url(${card.image})` }}
+                  className="flip-card-back w-[100%] h-[100%] bg-cover border-1 rounded-lg text-white  flex flex-col justify-center p-5 bg-black back"
+              /*     style={{ backgroundImage: `url(${card.image})` }} */
                 >
-                  <h1 className="text-center">{card.title} Details</h1>
-                  <p>
-                    {card.description} (More details can go here or be loaded dynamically.)
-                  </p>
+                 <img src={card.image} alt="" className="w-[300px] h-[100px] mb-3 border-t-2"/>
+                 <p className="w-[200px] text-2xl max-sm:text-[16px]">{card.backing}</p>
+                  <div className="flex justify-between mt-4" >
+                    <button className="bg-white px-6 text-black text-2xl bc-button ">Visit</button>
+                    <FaGithub className="text-2xl" />
+
+                  </div>
                 </div>
               </motion.div>
+            
+
             </div>
+            
           ))}
         </div>
+        <FaLongArrowAltRight  className="text-white absolute right-9 text-[100px] top-20"/>
       </div>
     </div>
   );

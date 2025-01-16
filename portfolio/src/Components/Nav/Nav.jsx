@@ -11,7 +11,7 @@ const Nav = () => {
       <div className="bg-black text-">
         <div className="nav_container flex w-[100%] mx-auto py-4 max-sm:justify-around justify-evenly px-5 ">
           <div className="nav_logo">
-            <h1 className="text-3xl text-[#f3eeee] tracking-wide max-sm:text-2xl font-sans ">NaveenKumar</h1>
+            <h1 className="text-3xl text-[#f3eeee] tracking-wide max-sm:text-2xl  ">NaveenKumar</h1>
           </div>
           <motion.div
             className="nav_links text-2xl max-sm:hidden px-4 rounded-full border-2 border-[#c5c3c3] hover:border-[#cbc9c9] transition duration-150 hidden md:block "
