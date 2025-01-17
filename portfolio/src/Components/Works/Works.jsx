@@ -156,8 +156,9 @@ const Works = () => {
             
           ))}
         </div>
-        <FaLongArrowAltRight  className="text-white absolute right-9 text-[100px] top-20"/>
+       
       </div>
+      <FaLongArrowAltRight  className="text-white absolute text-[200px] left-[150px] top-[400px] opacity-30 scale-x-[1]"/>
     </div>
   );
 };
