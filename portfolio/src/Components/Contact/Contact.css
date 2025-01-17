@@ -26,15 +26,19 @@
     color: #b6b4b4;
     font-size: 17px;
 }
-.rightu h2{
-    animation: jump 2s infinite;
+.rightu {
+   
+    background: linear-gradient(to right,#383737,#181818);
+    border-radius: 10px; 
 }
-
-/* @keyframes jump {
+.item{
+ animation: jump 2s infinite;
+}
+ @keyframes jump {
     0%, 100% {
         transform: translateY(0);
     }
     50% {
         transform: translateY(-10px);
     }
-} */
+} 

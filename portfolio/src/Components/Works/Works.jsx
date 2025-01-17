@@ -7,6 +7,7 @@ import Project3 from '../../assets/img/project3.jpeg';
 import { FaGithub } from "react-icons/fa";
 
 import { FaLongArrowAltRight } from "react-icons/fa";
+import Footer from "../Footer/Footer";
 
 const Works = () => {
   const [cards, setCards] = useState([
@@ -115,10 +116,16 @@ const Works = () => {
       <div className="cursor-pointer w-[90%] m-auto ">
         <div className="flex wrape gap-4 items-center  h-[80vh] ml-8">
           {cards.map((card, index) => (
-            <div
+            <motion.div
               key={index}
               className="flip-card  h-[300px] rounded-md   "
               onMouseEnter={() => handleFlip(index)}
+              initial={{y:'-100vh'}}
+              animate={{y:0}}
+             transition={{
+              duration:1
+             }}
+
             >
               <motion.div
                 className="flip-card-inner h-[100%] text-white col-span-3 w-[300px] max-sm:w-[200px]"
@@ -152,13 +159,14 @@ const Works = () => {
               </motion.div>
             
 
-            </div>
+            </motion.div>
             
           ))}
         </div>
        
       </div>
       <FaLongArrowAltRight  className="text-white absolute text-[200px] left-[150px] top-[400px] opacity-30 scale-x-[1]"/>
+      <Footer/>
     </div>
   );
 };

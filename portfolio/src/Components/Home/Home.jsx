@@ -219,9 +219,10 @@ const Home = () => {
               </span>
             </h1>
           </div>
-        </motion.section> 
+        </motion.section>
+        <Footer/> 
       </div>
-      <Footer/>
+      
     </>
   );
 };
