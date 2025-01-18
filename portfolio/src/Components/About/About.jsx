@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from "react";
 import VanillaTilt from "vanilla-tilt";
 import robo1 from "../../assets/img/robo3.jpg";
 import "./About.css";
+import { motion } from "framer-motion";
 const App = () => {
   const specificDivRef = useRef(null);
 
@@ -27,14 +28,42 @@ const App = () => {
   /*  ref={specificDivRef} */
   return (
     <>
-      <div className="bg-black min-h-screen ">
+      <div className="bg-black min-h-screen relative">
+        <motion.h1 className="text-white absolute -top-9 left-1 text-[100px] z-10 opacity-55"
+        initial={{x:'100vw'}}
+        animate={{x:0}}
+       transition={{duration:0.7}}
+        >
+          Hover...
+        </motion.h1>
         <div className="w-[80%] flex justify-center m-auto gap-3 flex-wrap">
-        <div className=" w-[30%] mb-4 bg-cover -z-1 "ref={specificDivRef}>
-            <img src={robo1} alt=""  className="items"  />
-          </div>
-          <div
-            className=" bg-white w-[60%]  mb-4 p-8 mt-7 rounded-tl-[50px] rounded-br-[50px]  z-10 max-md:w-[100%]"
+          <motion.div
+            className=" w-[30%] mb-4 bg-cover -z-1 "
+            initial={{ y: "-100vh" }}
+            animate={{y:0}}
+            transition={{duration:0.7}}
+          >
+            <img src={robo1} alt="" className="items max-sm:w-[250px] mt-10" />
+          </motion.div>
+          <motion.div
+            className=" bg-white w-[60%]  mb-4 p-8 mt-7 rounded-full flex justify-center items-center flex-col z-10 max-md:w-[100%] cards max-xl:text-2xl"
             ref={specificDivRef}
+            initial={{ opacity: 0, scaley: "180", rotate: 180 }}
+            animate={{
+              scale: [1, 1, 1, 1, 1],
+              rotate: [0, 0, 18, 18, 0],
+              borderRadius: ["50px", "50px", "0", "50px", "50px"],
+              opacity: 1,
+              scale: 1,
+            }}
+            transition={{
+              duration: 2,
+              ease: "easeInOut",
+              times: [0, 0.2, 0.5, 0.8, 1],
+
+              scale: { type: "spring", visualDuration: 0.4, bounce: 0.5 },
+              repeatDelay: 1,
+            }}
           >
             <div className="text ">
               <h1 className="text-black text-5xl text-center mb-4 max-sm:text-[24px]">
@@ -56,8 +85,7 @@ const App = () => {
                 Let’s create something amazing together!
               </p>
             </div>
-          </div>
-          
+          </motion.div>
         </div>
       </div>
     </>
