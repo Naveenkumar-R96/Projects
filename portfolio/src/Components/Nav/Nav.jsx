@@ -71,7 +71,7 @@ const Nav = () => {
           animate={{x:'0'}}
           transition={{duration:0.4}}
           >
-            <Link to="/contact">Let's Talk</Link>
+            <Link to="contact">Let's Talk</Link>
           </motion.button>
           <div className="md:hidden">
             <RiMenu5Line
@@ -81,7 +81,7 @@ const Nav = () => {
             />
           </div>
         </div>
-        <Responsive open={open} />
+        <Responsive open={open} setopen={setopen}/>
       </div>
     </>
   );

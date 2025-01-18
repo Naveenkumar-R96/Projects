@@ -4,7 +4,7 @@ import robo1 from "../../assets/img/robo3.jpg";
 import "./About.css";
 import { motion } from "framer-motion";
 const App = () => {
-  const specificDivRef = useRef(null);
+ const specificDivRef = useRef(null);
 
   useEffect(() => {
     // Initialize VanillaTilt on the specific `div` element

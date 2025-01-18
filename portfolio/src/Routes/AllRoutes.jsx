@@ -5,6 +5,7 @@ import Home from "../Components/Home/Home";
 import PagenotFound from "../Components/PageNotFound/PagenotFound";
 import Works from "../Components/Works/Works";
 import Contact from "../Components/Contact/Contact";
+import Credential from "../Components/Credential/Credential";
 
 
 const AllRoutes = () => {
@@ -16,6 +17,7 @@ const AllRoutes = () => {
     <Route path="/work" element={<Works />} />
     <Route path="contact" element={<Contact />} />
     <Route path="*" element={<PagenotFound />} />
+    <Route path="credential" element={<Credential/>}></Route>
   </Routes>
    
   );
