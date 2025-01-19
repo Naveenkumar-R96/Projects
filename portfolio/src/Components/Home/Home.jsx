@@ -6,7 +6,7 @@ import { motion, useInView } from "framer-motion";
 import { BsPersonWorkspace, BsTwitterX } from "react-icons/bs";
 import { PiCertificateLight } from "react-icons/pi";
 import { GiFallingStar } from "react-icons/gi";
-import profile from "../../assets/img/profile.jpg";
+import man from "../../assets/img/man3.jpg";
 import pc from "../../assets/img/pc.png";
 import { useRef } from "react";
 import Footer from "../Footer/Footer";
@@ -44,7 +44,7 @@ const Home = () => {
             >
               <div className="flex justify-center items-center image-container py-5 px-5 w-[200px] h-[200px] bg-[#323232] rounded-lg mr-8 max-sm:hidden ">
                 <div className="img-box h-[100%] w-[100%] rounded-lg flex justify-center items-center bg">
-                  <img src={profile} alt="" className="rounded-2xl" />
+                  <img src={man} alt="" className="rounded-2xl" />
                 </div>
               </div>
               <Link to="/about">
