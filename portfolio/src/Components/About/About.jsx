@@ -40,19 +40,17 @@ const App = () => {
         <div className="w-[80%] flex justify-center m-auto gap-3 flex-wrap">
           <motion.div
             className=" w-[30%] mb-4 bg-cover -z-1 "
-            initial={{ y: "-100vh", x:'-50vw' }}
-            animate={{y:0, x:0}}
-            transition={{duration:2}}
+           
           >
             <img src={robo1} alt="" className="items max-sm:w-[250px] mt-10" />
           </motion.div>
           <motion.div
             className=" bg-white w-[60%]  mb-4 p-8 mt-7 rounded-full flex justify-center items-center flex-col z-10 max-md:w-[100%] cards max-xl:text-2xl"
             ref={specificDivRef}
-            initial={{ opacity: 0, scaley: "180", rotate: 180 }}
+            initial={{ opacity: 0,  }}
             animate={{
-              scale: [1, 1, 1, 1, 1],
-              rotate: [0, 0, 18, 18, 0],
+              scale: [1, ],
+              
               borderRadius: ["50px", "50px", "0", "50px", "50px"],
               opacity: 1,
              
@@ -62,7 +60,7 @@ const App = () => {
               ease: "easeInOut",
               times: [0, 0.2, 0.5, 0.8, 1],
 
-              scale: { type: "spring", visualDuration: 0.4, bounce: 0.5 },
+              scale: { type: "spring", visualDuration: 0.4 },
               repeatDelay: 1,
             }}
           >

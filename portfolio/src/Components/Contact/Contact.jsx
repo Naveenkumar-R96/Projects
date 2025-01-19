@@ -47,7 +47,7 @@ const Contact = () => {
     animate={{y:0}}
     transition={{duration:0.8}}
     >
-       <img src={robo} alt="" className='max-sm:w-[150px] absolute top-0 max-sm:-right-0 right-0 -z-1 item w-[300px]' />
+       <img src={robo} alt="" className='max-sm:w-[150px] absolute bottom-0 max-sm:-right-0 right-0 -z-1 item w-[300px]' />
     </motion.div>
    
       <div className="contacting-container max-w-full flex flex-wrap justify-center items-center z-10 mr-8">

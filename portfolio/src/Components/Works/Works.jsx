@@ -127,7 +127,7 @@ const Works = () => {
 
             >
               <motion.div
-                className="flip-card-inner h-[100%] text-white col-span-3 w-[300px] max-sm:w-[200px]"
+                className="flip-card-inner h-[100%] text-white col-span-3 w-[300px] max-sm:w-[260px]"
                 initial={false}
                 animate={{ rotateY: card.isFlipped ? 180 : 0 }}
                 transition={{ duration: 0.6 }}
@@ -138,8 +138,8 @@ const Works = () => {
                   className="flip-card-front w-[100%] h-[100%] bg-cover border-1 rounded-lg p-5   bg-white text-black cards flex justify-center items-center flex-col "
                  
                 >
-                  <h1 className="text-center mb-3 text-3xl max-sm:text-[18px] text-black">{card.title}</h1>
-                  <p className="max-sm:text-[16px] text-2xl opacity-60">{card.description}</p>
+                  <h1 className="text-center mb-3 text-3xl max-sm:text-[23px] text-black">{card.title}</h1>
+                  <p className="max-sm:text-[20px] text-2xl opacity-60">{card.description}</p>
                 </div>
 
                 {/* Back Side */}
