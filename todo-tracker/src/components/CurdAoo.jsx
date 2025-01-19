@@ -44,7 +44,7 @@ const CrudApp = () => {
       </h2>
       <Form addItems={addItems} currentItem={currentItem}/>
       <Table items={items} setItem={setItems}  editItem={editItem}/>
-      <p className="text-white bg-none">hi</p>
+      
     </div>
   );
 };
