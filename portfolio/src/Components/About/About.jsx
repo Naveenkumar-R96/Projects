@@ -55,7 +55,7 @@ const App = () => {
               rotate: [0, 0, 18, 18, 0],
               borderRadius: ["50px", "50px", "0", "50px", "50px"],
               opacity: 1,
-              scale: 1,
+             
             }}
             transition={{
               duration: 2,

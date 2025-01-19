@@ -1,6 +1,6 @@
 import React from 'react'
 import "./Internship.css"
-import internship from '../../assets/img/internship.jpg'
+import internship from '../../assets/img/Internship.jpg'
 import internship1 from '../../assets/img/mern.png'
 import Footer from '../Footer/Footer'
 const Internhips = () => {
