@@ -58,7 +58,7 @@ const App = () => {
             transition={{
               duration: 2,
               ease: "easeInOut",
-              times: [0, 0.2, 0.5, 0.8, 1],
+             
 
               scale: { type: "spring", visualDuration: 0.4 },
               repeatDelay: 1,

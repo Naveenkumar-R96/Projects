@@ -4,7 +4,7 @@ import { LuPhoneCall } from "react-icons/lu";
 import { TiLocation } from "react-icons/ti";
 import './Contact.css'
 import { input } from 'framer-motion/client';
-import robo from '../../assets/img/robo4.jpg'
+import robo from '../../assets/img/robo1.jpg'
 import { motion } from 'framer-motion';
 import Footer from '../Footer/Footer';
 const Contact = () => {

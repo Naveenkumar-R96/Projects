@@ -113,7 +113,7 @@ const Works = () => {
       backgroundPosition: "center", backgroundRepeat:'no-repeat',  width: "100%",}} */ >
         <h1 className="text-white text-[200px]  opacity-25 absolute -top-20 right-9 max-sm:text-[100px] max-sm:-top-1">Work</h1>
       <div className="cursor-pointer w-[90%] m-auto ">
-        <div className="flex wrape gap-[100px] items-center  h-[80vh] ml-8">
+        <div className="flex wrape gap-[100px] items-center  h-[80vh] ml-8 max-sm:gap-[30px]">
           {cards.map((card, index) => (
             <motion.div
               key={index}
