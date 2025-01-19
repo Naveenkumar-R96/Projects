@@ -16,7 +16,7 @@ const Nav = () => {
           initial={{x:'-100vh'}}
           animate={{x:0}}
           transition={{
-            duration:0.8
+            duration:0.5
           }}
           >
             <h1 className="text-3xl text-[#f3eeee] tracking-wide max-sm:text-2xl  ">

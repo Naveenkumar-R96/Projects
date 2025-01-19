@@ -23,7 +23,7 @@ const Home = () => {
     "Github",
   ];
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true }); //
+  const isInView = useInView(ref); //
   return (
     <>
    
@@ -35,9 +35,9 @@ const Home = () => {
               initial={{ x: "50%", y: "50%" }}
               animate={{ x: 0, y: 0 }}
               transition={{
-                duration: 1,
+                duration: 0.3,
               }}
-              whileHover={{scale:1.1 ,duration:0.2}}
+              whileHover={{scale:1.05}}
            
 
               
@@ -70,23 +70,24 @@ const Home = () => {
               initial={{ y: "100vw" }}
               animate={{ y: 0 }}
               transition={{
-                duration: 0.5,
+                duration: 0,
               }}
+              whileHover={{scale:1.05}}
         
             >
               <div className="flex justify-evenly text-4xl mt-4 max-sm:mt-1 max-sm:text-2xl ">
-                <a href="https://github.com/Naveenkumar-R96"><FaGithub className="bg-white text-black rounded-full" /></a>
-               <a href="https://www.linkedin.com/in/naveen-kumar-1361252b7/"> <FaLinkedin className="" /></a>
-                <BsTwitterX className="" />
+                <a href="https://github.com/Naveenkumar-R96"><FaGithub className="bg-white text-black rounded-full hover:bg-[#8b8989] hover:rounded-full hover:p-2" /></a>
+               <a href="https://www.linkedin.com/in/naveen-kumar-1361252b7/"> <FaLinkedin className="hover:bg-[#8b8989] hover:rounded-full hover:p-2" /></a>
+               <a href="https://x.com/NaveenKumar__96">
+                <BsTwitterX className="cursor-pointer hover:bg-[#8b8989] hover:rounded-full hover:p-2" />
+                </a>
               </div>
-              <h3 className="uppercase text-2xl text-[#818181] mt-2 ml-3 max-sm:text-xl max-sm:ml-1">
+              <h3 className="uppercase text-2xl text-[#818181] mt-2 ml-3 max-sm:text-xl max-sm:ml-1 ">
                 Stay with me
               </h3>
               <h1 className="text-4xl tracking-wider ml-3 max-sm:text-2xl max-sm:ml-1">
                 Profiles{" "}
-                <span>
-                  <FaAngleDoubleRight className="max-sm:text-[20px] text-[#818181] text-3xl transition duration-500 hover:text-white ml-[70%] max-sm:ml-[50%]" />
-                </span>
+             
               </h1>
             </motion.div>
           </div>
@@ -100,8 +101,9 @@ const Home = () => {
               initial={{ x: "100vw" }}
               animate={{ x: 0 }}
               transition={{
-                duration: 1,
+                duration: 0.4,
               }}
+              whileHover={{scale:1.05}}
             > <Link to='work'>
               <div className="icon-box">
                 <BsPersonWorkspace className="text-white text-[100px]" />
@@ -125,8 +127,10 @@ const Home = () => {
               initial={{ y: "-100vw" }}
               animate={{ y: 0 }}
               transition={{
-                duration: 1,
+                duration: 0.5,
               }}
+              whileHover={{scale:1.05}}
+              
             >
               <div>
                 <div className="top-box w-[100%] px-[20px] py-[10px] text-center text-[#6c6c6c] uppercase text-[20px] max-sm:text-[16px]">
@@ -189,10 +193,10 @@ const Home = () => {
             duration: 0.8,
             ease: "easeOut",}}>
               <Link to="credential">
-          <div
+          <motion.div
             className="specialization max-[700px]:w-[38%] h-[200px] flex gap-5 justify-center p-5 max-sm:w-auto max-sm:h-[180px] max-sm:mb-4"
           
-            
+            whileHover={{scale:1.05}}
           >
             <div className="icons-container mt-7 text-white text-[90px] max-sm:text-[50px]">
               <PiCertificateLight />
@@ -202,15 +206,17 @@ const Home = () => {
               <h1 className="text-white mt-3 text-3xl max-md:xl">Credential</h1>
               <FaAngleDoubleRight className="max-sm:text-[20px] text-[#818181] text-3xl transition duration-500 hover:text-white ml-[80%] mt-3" />
             </div>
-          </div>
+          </motion.div>
           </Link>
-          <div className="projects w-[40%] h-[200px] bg-gradient-to-r from-[#383737] to-[#181818] rounded-lg flex justify-evenly max-sm:w-[60%] items-center max-sm:h-auto p-3 max-[980px]:w-[60%]">
+          <motion.div className="projects w-[40%] h-[200px] bg-gradient-to-r from-[#383737] to-[#181818] rounded-lg flex justify-evenly max-sm:w-[60%] items-center max-sm:h-auto p-3 max-[980px]:w-[60%]"
+           whileHover={{scale:1.05}}>
             <img
               src={pc}
               alt=""
               className="w-[200px] h-[100%] max-sm:w-[80px] max-sm:h-[80px] rounded-lg"
               style={{ filter: "contrast(0)" }}
             />
+            <Link to='internship'>
             <div>
               <h3 className="text-[#818181] text-2xl mt-5 ">Works</h3>
               <h1 className="text-4xl text-white max-sm:text-xl">
@@ -218,9 +224,10 @@ const Home = () => {
               </h1>
               <FaAngleDoubleRight className="max-sm:text-[20px] text-[#818181] text-3xl transition duration-500 hover:text-white ml-[70%] mt-2" />
             </div>
-          </div>
+            </Link>
+          </motion.div>
          
-          <div className="talk w-[20%] bg-gradient-to-r from-[#383737] to-[#181818] rounded-lg h-auto max-sm:w-[30%] max-sm:h-auto max-sm:mt-4 max-[980px]:w-[70%] max-md:mt-2 text-center">
+          <motion.div className="talk w-[20%] bg-gradient-to-r from-[#383737] to-[#181818] rounded-lg h-auto max-sm:w-[30%] max-sm:h-auto max-sm:mt-4 max-[980px]:w-[70%] max-md:mt-2 text-center" whileHover={{scale:1.05}}>
           <Link to='contact'>
             <GiFallingStar className="text-white mt-5 ml-4  text-5xl max-sm:text-2xl " />
             <h1 className="mt-4  text-4xl text-white max-sm:text-xl ">
@@ -230,7 +237,7 @@ const Home = () => {
               </span>
             </h1>
             </Link>
-          </div>
+          </motion.div>
         
         </motion.section>
         <Footer/> 

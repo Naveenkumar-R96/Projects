@@ -6,6 +6,7 @@ import './Contact.css'
 import { input } from 'framer-motion/client';
 import robo from '../../assets/img/robo4.jpg'
 import { motion } from 'framer-motion';
+import Footer from '../Footer/Footer';
 const Contact = () => {
   const [data,setData]=useState({
     Name:'',
@@ -39,8 +40,8 @@ const Contact = () => {
   }
   return (
    <>
-  
-    <div className="contact bg-black text-white py-5 px-7 w-full min-h-screen max-sm:h-auto max-md:h-auton flex justify-center items-center relative">
+    <div>
+    <div className="contact bg-black text-white py-5 px-7 w-full min-h-screen max-sm:h-auto max-md:h-auton flex justify-center items-center relativem h-auto">
    <motion.div
     initial={{y:100}}
     animate={{y:0}}
@@ -111,6 +112,10 @@ const Contact = () => {
          </div>
         </motion.div>
       </div>
+        
+      </div>
+      
+
     </div>
    </>
   )

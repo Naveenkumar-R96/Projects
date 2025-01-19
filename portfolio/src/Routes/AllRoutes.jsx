@@ -6,6 +6,7 @@ import PagenotFound from "../Components/PageNotFound/PagenotFound";
 import Works from "../Components/Works/Works";
 import Contact from "../Components/Contact/Contact";
 import Credential from "../Components/Credential/Credential";
+import Internhips from "../Components/Internships/Internhips";
 
 
 const AllRoutes = () => {
@@ -17,7 +18,8 @@ const AllRoutes = () => {
     <Route path="/work" element={<Works />} />
     <Route path="contact" element={<Contact />} />
     <Route path="*" element={<PagenotFound />} />
-    <Route path="credential" element={<Credential/>}></Route>
+    <Route path="credential" element={<Credential/>}/>
+    <Route path="internship" element={<Internhips/>}></Route>
   </Routes>
    
   );

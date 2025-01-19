@@ -3,6 +3,7 @@ import VanillaTilt from "vanilla-tilt";
 import robo1 from "../../assets/img/robo3.jpg";
 import "./About.css";
 import { motion } from "framer-motion";
+import Footer from "../Footer/Footer";
 const App = () => {
  const specificDivRef = useRef(null);
 
@@ -39,9 +40,9 @@ const App = () => {
         <div className="w-[80%] flex justify-center m-auto gap-3 flex-wrap">
           <motion.div
             className=" w-[30%] mb-4 bg-cover -z-1 "
-            initial={{ y: "-100vh" }}
-            animate={{y:0}}
-            transition={{duration:0.7}}
+            initial={{ y: "-100vh", x:'-50vw' }}
+            animate={{y:0, x:0}}
+            transition={{duration:2}}
           >
             <img src={robo1} alt="" className="items max-sm:w-[250px] mt-10" />
           </motion.div>
@@ -87,6 +88,7 @@ const App = () => {
             </div>
           </motion.div>
         </div>
+        <Footer/>
       </div>
     </>
   );
