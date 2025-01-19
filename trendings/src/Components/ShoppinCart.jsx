@@ -3,7 +3,7 @@ import { GiShoppingCart } from "react-icons/gi";
 import { useEffect, useState } from "react";
 import { useCart } from "../context/Cartcontext";
 import Cart from './Cart'
-import { formatCurrency } from "../util/FormatCurrency";
+import { formatCurrency } from "../util/Formatcurrency";
 
 const ShoppinCart = ({}) => {
   const [isoopen, setisopen] = useState(false);
