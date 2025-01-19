@@ -1,97 +1,96 @@
 import React, { useState } from "react";
 import "./Works.css";
 import { motion } from "framer-motion";
-import Project1 from '../../assets/img/pr1.jpg';
-import Project2 from '../../assets/img/pr2.jpg';
+import trend from '../../assets/img/trend.png';
 import Project3 from '../../assets/img/project3.jpeg';
 import { FaGithub } from "react-icons/fa";
-
+import shoe from '../../assets/img/shoe.png';
 import { FaLongArrowAltRight } from "react-icons/fa";
 import Footer from "../Footer/Footer";
+import todo from '../../assets/img/todo.png';
+import movie from '../../assets/img/movie.png';
+import wheather from '../../assets/img/wheather.png';
+import first from '../../assets/img/first.png';
 
 const Works = () => {
   const [cards, setCards] = useState([
     {
-      title: "Project ",
+      title: "Shoe Store",
       description:
-        "This is the description for Project 1. Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
-      image: Project1,
+        "A React and Tailwind CSS-powered shoe store offering a modern UI for browsing shoes. Features include filtering options to sort shoes by preferences",
+      image: shoe,
       isFlipped: false,
       isAnimating: false,
-      backing:"#git #javascript #tailwind #typscript"
+      backing:"#git #javascript #tailwind #react",
+  
+  
+      goto:"https://naveen-shoecart-31.vercel.app/",
+      github:"https://github.com/Naveenkumar-R96/Projects/tree/main/shoe-cart"
+     
     },
     {
-      title: "Project 2",
+      title: "Trendings",
       description:
-        "This is the description for Project 2. Dolorem tempora modi adipisci quis corporis ratione.",
-      image: Project2,
+        "A trending dressing site built with React and Tailwind CSS, featuring a cart system and local storage for persistent data.",
+      image: trend,
       isFlipped: false,
       isAnimating: false,
-      backing:"#git #javascript #tailwind #typscript"
+      backing:"#git #javascript #tailwind #react",
+      github:"https://github.com/Naveenkumar-R96/Projects/tree/main/trendings",
+      goto:"https://naveen-trendings-31.vercel.app/",
+
     },
     {
-      title: "Project 3",
+      title: "Todo Tracker",
       description:
-        "This is the description for Project 3. Minima quae voluptatum repellat velit?",
-      image: Project3,
+        "A React-based ToDo Tracker featuring CRUD operations and local storage integration for managing and persisting tasks efficiently.",
+      image: todo,
       isFlipped: false,
       isAnimating: false,
-      backing:"#git #javascript #tailwind #typscript"
+      backing:"#git #javascript #tailwind #react",
+      github:"https://github.com/Naveenkumar-R96/Projects/tree/main/todo-tracker",
+
+      goto:"https://naveen-todo-31.vercel.app/"
+
     },
     {
-      title: "Project 1",
+      title: "Movie App",
       description:
-        "This is the description for Project 1. Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
-      image: Project1,
+        "A movie app built with React and Tailwind CSS, featuring a search bar and API integration to fetch and display movie data.",
+      image:movie ,
       isFlipped: false,
       isAnimating: false,
-      backing:"#git #javascript #tailwind #typscript"
+      backing:"#git #javascript #tailwind #react",
+      github:"https://github.com/Naveenkumar-R96/Main-Flow-Internship/tree/master/movie-app",
+
+      goto:"https://naveen-moviehunt-31.vercel.app/"
+
     },
     {
-      title: "Project 2",
+      title: "Wheather App",
       description:
-        "This is the description for Project 2. Dolorem tempora modi adipisci quis corporis ratione.",
-      image: Project2,
+        "A weather app built with React and Tailwind CSS, featuring a search bar and API integration to fetch and display weather data.",
+      image: wheather,
       isFlipped: false,
       isAnimating: false,
-      backing:"#git #javascript #tailwind #typscript"
+      backing:"#git #javascript #tailwind #react",
+      github:"https://github.com/Naveenkumar-R96/Projects/tree/main/wheather-app",
+      goto:"https://naveen-wheather-31.vercel.app/"
+
     },
     {
-      title: "Project 3",
+      title: "Landing Page",
       description:
-        "This is the description for Project 3. Minima quae voluptatum repellat velit?",
-      image: Project3,
+        "A landing page built with html and CSS, featuring a modern UI design and responsive layout for various devices.",
+      image: first,
       isFlipped: false,
       isAnimating: false,
-      backing:"#git #javascript #tailwind #typscript"
+      backing:"#git #html #css",
+
+      goto:"https://naveen-firstsite-31.netlify.app"
+
     },
-    {
-      title: "Project 1",
-      description:
-        "This is the description for Project 1. Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
-      image: Project1,
-      isFlipped: false,
-      isAnimating: false,
-      backing:"#git #javascript #tailwind #typscript"
-    },
-    {
-      title: "Project 2",
-      description:
-        "This is the description for Project 2. Dolorem tempora modi adipisci quis corporis ratione.",
-      image: Project2,
-      isFlipped: false,
-      isAnimating: false,
-      backing:"#git #javascript #tailwind #typscript"
-    },
-    {
-      title: "Project 3",
-      description:
-        "This is the description for Project 3. Minima quae voluptatum repellat velit?",
-      image: Project3,
-      isFlipped: false,
-      isAnimating: false,
-      backing:"#git #javascript #tailwind #typscript"
-    },
+    
   ]);
 
   const handleFlip = (index) => {
@@ -151,8 +150,12 @@ const Works = () => {
                  <img src={card.image} alt="" className="w-[300px] h-[100px] mb-3 border-t-2"/>
                  <p className="w-[200px] text-2xl max-sm:text-[16px]">{card.backing}</p>
                   <div className="flex justify-between mt-4" >
+                    <a href={card.goto}>
                     <button className="bg-white px-6 text-black text-2xl bc-button ">Visit</button>
+                    </a>
+                    <a href={card.github}>
                     <FaGithub className="text-2xl" />
+                    </a>
 
                   </div>
                 </div>
