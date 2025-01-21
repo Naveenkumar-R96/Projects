@@ -56,7 +56,7 @@ const Home = () => {
                     NaveenKumar
                   </h3>
                   <p className="text-[#818181] tracking-[1px] font-semibold max-sm:text-sm">
-                    Lorem ipsum dolor sit amet, consectetur{" "}
+                    A React Frontend Developer
                   </p>
                   <div className="icon">
                     <FaAngleDoubleRight className="max-sm:text-[20px] text-[#818181] text-3xl transition duration-500 hover:text-white ml-[80%] max-sm:ml-[80%] md:mt-8" />
