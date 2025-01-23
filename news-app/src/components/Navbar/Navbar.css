@@ -1,0 +1,11 @@
+.header{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 2rem;
+}
+.category-list{
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+    gap:2rem
+}

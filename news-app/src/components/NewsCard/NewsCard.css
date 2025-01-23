@@ -1,0 +1,14 @@
+.news-card{
+    max-width: 300px;
+    max-height: 300px;
+    margin-bottom: 10rem;
+}
+.news-image{
+    width: 200px;
+    height: 200px;
+}
+h1{
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
