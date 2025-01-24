@@ -21,6 +21,12 @@ export const NewsProvider = ({ children }) => {
     const [articles,setArticles]=useState([])
     const [loading,setLoading]=useState(true)
     const [error,setError]=useState(null)
+    const [currentPage,setCurrentPage]=useState(1)
+    const [totalResults,setTotalResults]=useState(0)
+    const [category,setCategory]=useState("")
+
+
+
     const fetchNews=async()=>{
         setLoading(true)
         setError(null)
@@ -28,11 +34,14 @@ export const NewsProvider = ({ children }) => {
            const response= await axios.get(`${BASE_URL}/top-headlines`,{
                 params:{
                     apikey:API_KEY,
-                    country:"us"
+                    country:"us",
+                    page:currentPage,
+                    pageSize:6
                 }
             })
             console.log(response.data.articles)
             setArticles(response.data.articles)
+            setTotalResults(response.data.totalResults)
         }
         catch (err){
             setError("could not fetch the news,please try again later")
@@ -43,9 +52,9 @@ export const NewsProvider = ({ children }) => {
     }
     useEffect(()=>{
         fetchNews()
-    },[])
+    },[currentPage,category])
     return(
-    <NewsContxt.Provider value={{articles,loading,error,fetchNews}}>
+    <NewsContxt.Provider value={{articles,loading,error,fetchNews,setCurrentPage,totalResults,currentPage}}>
         {
             children
         }
