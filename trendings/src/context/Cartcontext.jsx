@@ -1,5 +1,6 @@
 import { createContext, useContext, useState } from "react";
 import { allProducts } from "../assets";
+import { useEffect } from "react";
 import { getItemFromStorage,getParsedItemFromStorage,setItemInStorage } from "../util/localStorage";
 const CartContext=createContext();
 
@@ -8,8 +9,17 @@ export const CartProvider=({children})=>{
     const setItem=()=>{
         setAllItem(allProducts)
     }
+    
+      useEffect(() => {
+        setItem();
+      }, []);
+
+     /*  useEffect(() => {
+          console.log(allItems);
+        }, [allItems]);
+ */
     const addToCart=(item)=>{
-       console.log(item)
+       
         setAllItem(prevItems=>{
             return(
                
@@ -47,8 +57,10 @@ export const CartProvider=({children})=>{
         }
     }
 
+   
+
     return(
-        <CartContext.Provider value={{allItems,setItem,addToCart,removeFromCart,updateQuantity}}>
+        <CartContext.Provider value={{allItems,setItem,addToCart,removeFromCart,updateQuantity,setAllItem}}>
             {children}
         </CartContext.Provider>
     )

@@ -4,14 +4,9 @@ import { useCart } from "./context/Cartcontext";
 import ShoppinCart from "./Components/ShoppinCart";
 import NavBar from "./Components/NavBar";
 const App = () => {
-  const { allItems, setItem } = useCart();
+  const { allItems } = useCart();
 
-  useEffect(() => {
-    setItem();
-  }, []);
-  useEffect(() => {
-    console.log(allItems);
-  }, [allItems]);
+  
   return (
     <>
     <NavBar/>

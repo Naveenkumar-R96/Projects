@@ -32,18 +32,8 @@ export const NewsProvider = ({ children }) => {
         setLoading(true)
         setError(null)
         try{
-           const response= await axios.get(`${BASE_URL}/top-headlines`,{
-                params:{
-                    apiKey:API_KEY,
-                    country:"us",
-                    page:currentPage,
-                    pageSize:3,
-                    category: category,
-                    q:query
-                }
-            })
-            console.log(response.data)
-            console.log(response.data.articles)
+        const response = await axios.get(`${BASE_URL}/top-headlines?apiKey=${API_KEY}&country=us&page=${currentPage}&pageSize=3&category=${category}&q=${query}`)
+         
             setArticles(response.data.articles)
             setTotalResults(response.data.totalResults)
         }
