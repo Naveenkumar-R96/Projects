@@ -1,7 +1,14 @@
 import React from 'react'
 import "./Navbar.css"
 import { useNewsContext } from '../Context/Context'
+import Responsive from './Responsive'
+import { useState } from 'react'
 const Navbar = () => {
+
+
+
+    const [open,setOpen]=useState(false)
+
     const categories =["Business","Entertainment","General","Health","Science","Sports","Technology"]
 
     const {category,changeCategory,setQuery}=useNewsContext()
@@ -23,7 +30,8 @@ const Navbar = () => {
             return (<li key={categoryName} onClick={()=>(changeCategory(categoryName))}>{categoryName}</li>)
         })}
     </ul>
-    
+    <h1 onClick={()=>setOpen(!open)} className='toggler'>haai</h1>
+    <Responsive open={open} setOpen={setOpen}/>
     <div className="search-bar">
         <form action="submit" onSubmit={handleSearch}>
             <input type="text" name='search' placeholder='search News' />

@@ -1,0 +1,16 @@
+.number{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+ul{
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    cursor: pointer;
+}
+button{
+    margin-right: 20px;
+    margin-left: 20px;
+    cursor: pointer;
+}

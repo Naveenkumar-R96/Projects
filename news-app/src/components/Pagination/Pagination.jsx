@@ -14,7 +14,7 @@ const Pagination = ({currentPage,setCurrentPage,totalResults}) => {
         window.scrollTo({top:0,behavior:"smooth"})
     }
   return (
-    <div>
+    <div className='number'>
       <button className='prev-btn' disabled={currentPage===1} onClick={()=>currentPage >1 && handlePageClick(currentPage-1)}>Prev</button>
       <ul>
         {pageNumber.map((pageNumber)=>(
