@@ -15,14 +15,14 @@ const Pagination = ({currentPage,setCurrentPage,totalResults}) => {
     }
   return (
     <div>
-      <button className='prev-btn' disabled={currentPage===1} onClick={()=>currentPage >1 && handlePageClick(currentPage-1)}></button>
+      <button className='prev-btn' disabled={currentPage===1} onClick={()=>currentPage >1 && handlePageClick(currentPage-1)}>Prev</button>
       <ul>
         {pageNumber.map((pageNumber)=>(
             <li key={pageNumber} onClick={()=>handlePageClick(pageNumber)} className={`page-number ${pageNumber===currentPage ? "active" : ""}` }>{pageNumber}</li>
         ))
         }
       </ul>
-      <button disabled={currentPage===totalPages} onClick={()=>currentPage<totalPages && handlePageClick(currentPage +1)}>Next</button>
+      <button disabled={currentPage===totalPages} onClick={()=>currentPage< handlePageClick(currentPage +1)}>Next</button>
     </div>
 
   )

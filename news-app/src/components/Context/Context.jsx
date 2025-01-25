@@ -24,6 +24,7 @@ export const NewsProvider = ({ children }) => {
     const [currentPage,setCurrentPage]=useState(1)
     const [totalResults,setTotalResults]=useState(0)
     const [category,setCategory]=useState("")
+    const [query,setQuery]=useState("")
 
 
 
@@ -33,12 +34,15 @@ export const NewsProvider = ({ children }) => {
         try{
            const response= await axios.get(`${BASE_URL}/top-headlines`,{
                 params:{
-                    apikey:API_KEY,
+                    apiKey:API_KEY,
                     country:"us",
                     page:currentPage,
-                    pageSize:6
+                    pageSize:3,
+                    category: category,
+                    q:query
                 }
             })
+            console.log(response.data)
             console.log(response.data.articles)
             setArticles(response.data.articles)
             setTotalResults(response.data.totalResults)
@@ -52,9 +56,13 @@ export const NewsProvider = ({ children }) => {
     }
     useEffect(()=>{
         fetchNews()
-    },[currentPage,category])
+    },[currentPage,category,query])
+
+    const changeCategory=(newCategory)=>{
+        setCategory(newCategory)
+    }
     return(
-    <NewsContxt.Provider value={{articles,loading,error,fetchNews,setCurrentPage,totalResults,currentPage}}>
+    <NewsContxt.Provider value={{articles,loading,error,fetchNews,setCurrentPage,totalResults,currentPage,category,changeCategory,setQuery}}>
         {
             children
         }
