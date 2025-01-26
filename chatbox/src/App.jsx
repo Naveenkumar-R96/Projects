@@ -1,14 +1,36 @@
-import React from 'react'
-import ChatBotStart from './components/ChatBotStart/ChatBotStart'
-import ChatBotApp from './components/ChatApp/ChatBotApp'
+import React, { useState } from "react";
+import ChatBotStart from "./components/ChatBotStart/ChatBotStart";
+import ChatBotApp from "./components/ChatApp/ChatBotApp";
 
 const App = () => {
-  return (
-    <div className='container'>
-   {/*    <ChatBotStart/> */}
-      <ChatBotApp/>
-    </div>
-  )
-}
+  const [isChatting, setIsChatting] = useState(false);
+  const [chats, setChats] = useState([]);
+  const handleStartChat = () => {
+    setIsChatting(true);
+  };
 
-export default App
+  if (chats.length === 0) {
+    const newChat = {
+      id: `Chat ${new Date().toLocaleDateString(
+        "en-GB"
+      )} ${new Date().toLocaleTimeString()}`,
+      messages: [],
+    };
+    setChats([newChat]);
+  }
+
+  const handleGoBack = () => {
+    setIsChatting(false);
+  };
+  return (
+    <div className="container">
+      {isChatting ? (
+        <ChatBotApp onGoBack={handleGoBack} chats={chats} setChats={setChats} />
+      ) : (
+        <ChatBotStart onStartChat={handleStartChat} />
+      )}
+    </div>
+  );
+};
+
+export default App;
